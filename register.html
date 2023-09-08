@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        h1{
+            justify-content: center;
+            
+        }
+        #container{
+            background-color: #E8E8E8;
+            width: 500px;
+            height: 480px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            margin-top: 70px;
+        }
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: rgba(189, 184, 184, 0.897);
+            
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            font-size: 17px;
+            width: 450px;
+            color: rgb(0, 0, 0);
+        }
+        button{
+            font-size: 25px;
+            background-color: rgba(163, 153, 153, 0.841);
+            margin-left: 180px;
+            cursor: pointer;
+            border: none;
+            width: 150px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 align="center">REGISTER FORM</h1>
+        <label for="name">Name :</label><br>
+        <input type="text" id="name" required><br>
+        <br>
+        <label for="phone">Phone :</label><br>
+        <input type="text" id="phoneNo" required><br>
+        <br>
+        <label for="mail">Email :</label><br>
+        <input type="text" id="mail" required><br>
+        <br>
+        <label for="password">Password :</label><br>
+        <input type="password" id="password" required><br>
+        <br>
+        <label>Confirm Password :</label><br>
+        <input type="password" id="confirmpassword" required><br>
+        <br>
+        <button id="button" onclick="myfun()">Submit</button>
+
+
+    </div>
+
+    <script>
+        function myfun(){
+            const name=document.getElementById("name").value;
+            const mail=document.getElementById("mail").value;
+            const pass1=document.getElementById("password").value;
+            const pass2=document.getElementById("confirmpassword").value;
+            const ph=document.getElementById("phoneNo").value;
+
+            if(name.length==0 || mail.length==0 || pass1.length==0 || pass2.length==0 || pn.length==0){
+                alert("enter empty field");
+            }
+            if(pass1===pass2){
+                if(typeof ph==="number"){
+                    if(ph.length==10){
+                        alert("Registered Successfully");
+                    }
+                    else{
+                        alert("enter valid details");
+                    }
+                }
+                else{
+                        alert("enter valid details");
+                    } 
+            }
+            else{
+                        alert("enter valid details");
+                    } 
+        }
+
+    </script>
+    
+</body>
+</html>
